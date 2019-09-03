@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>컷인 발동률</title>
+</head>
+<body>
+
+<h1>컷인 발동률</h1>
+
+	<div class="input_parameter">
+		LV : <input type="number" id="input_lv" size="10" value="0" />
+		<br><br>
+		운 : <input type="number" id="input_luck" size="10" value="0" />
+		<br><br>
+
+		컷인 종류 : 
+       <select id="mode">
+          <option value="115">포뢰</option>
+          <option value="122" selected>어뢰</option>
+          <option value="130">주부</option>
+          <option value="140">주포</option>
+       </select>
+	   &nbsp&nbsp
+	   	기함 : 
+       <select id="flagship">
+          <option value="15">True</option>
+          <option value="0" selected>False</option>
+       </select>
+	   &nbsp&nbsp
+	   	중파 : 
+       <select id="medium">
+          <option value="18">True</option>
+          <option value="0" selected>False</option>
+       </select>
+	   &nbsp&nbsp
+	   	탐조등 : 
+       <select id="searchlight">
+          <option value="7">True</option>
+          <option value="0" selected>False</option>
+       </select>
+	   &nbsp&nbsp
+	   	조명탄 : 
+       <select id="flare">
+          <option value="4">True</option>
+          <option value="0" selected>False</option>
+       </select>
+	   &nbsp&nbsp
+	   	견시원 : 
+       <select id="lookout">
+          <option value="5">True</option>
+          <option value="0" selected>False</option>
+       </select>
+	</div>
+	<br>
+	컷인 발동률 : 
+	<font size="3"><p class="result" style="display:inline"></p></font>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="cal.js"></script>
+</body>
+</html> 
