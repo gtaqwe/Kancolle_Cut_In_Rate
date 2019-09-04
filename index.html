@@ -9,7 +9,9 @@
 <h1>컷인 발동률</h1>
 
 	<div class="input_parameter">
-		LV : <input type="number" id="input_lv" value="0" />
+		<fieldset>
+		<legend>아군</legend>
+		Lv : <input type="number" id="input_lv" value="0" />
 		<br><br>
 		운 : <input type="number" id="input_luck" value="0" />
 		<br><br>
@@ -51,15 +53,36 @@
           <option value="5">True</option>
           <option value="0" selected>False</option>
        </select>
+	   </fieldset>
+
+	   <fieldset>
+	   <legend>적</legend>
+	   	탐조등 : 
+       <select id="e_searchlight">
+          <option value="5">True</option>
+          <option value="0" selected>False</option>
+       </select>
+	   &nbsp&nbsp
+	   	조명탄 : 
+       <select id="e_flare">
+          <option value="10">True</option>
+          <option value="0" selected>False</option>
+       </select>
+	   </fieldset>
 	</div>
 	<br>
+	<fieldset>
+	<legend>결과</legend>
 	컷인 발동률 : 
 	<font size="3"><p class="result" style="display:inline"></p></font>
-	<br><br>
+	</fieldset>
+	<br>
 	<b>계산식</b><br>
 	<img src="cal.png"> 
 	<br><br>
-	참고 : <a href="https://gall.dcinside.com/kancolle/6076413">https://gall.dcinside.com/kancolle/6076413</a>
+	참고 : 
+	<br><a href="https://gall.dcinside.com/kancolle/6076413">https://gall.dcinside.com/kancolle/6076413</a>
+	<br><a href="https://docs.google.com/document/d/1tqYyqzdc1RT_fYDKFMcUId0kOZHCdGpVsObm6yt-Yco/edit#heading=h.8xfufzuc60lx">艦これ改のソフトって解析（翻訳）</a>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="cal.js"></script>

@@ -18,14 +18,19 @@ function get_number(id, max) {
 
 
 function update() {
-	lv=get_number("input_lv", 9999)
-	luck=get_number("input_luck", 9999)
-	mode=get_number("mode", 9999)
-	flagship=get_number("flagship", 9999)
-	medium=get_number("medium", 9999)
-	searchlight=get_number("searchlight", 9999)
-	flare=get_number("flare", 9999)
-	lookout=get_number("lookout", 9999)
+	var lv				= get_number("input_lv", 9999)
+	var luck			= get_number("input_luck", 9999)
+	var mode			= get_number("mode", 9999)
+	var flagship		= get_number("flagship", 9999)
+	var medium			= get_number("medium", 9999)
+	var searchlight		= get_number("searchlight", 9999)
+	var flare			= get_number("flare", 9999)
+	var lookout			= get_number("lookout", 9999)
+	
+	var e_searchlight	= get_number("e_searchlight", 9999)
+	var e_flare			= get_number("e_flare", 9999)
+	
+	var main_cal 		= 0
 	
 	if (luck<50) {
 		main_cal = 0.75 * Math.sqrt(lv) + 15 + luck
@@ -33,7 +38,9 @@ function update() {
 	else {
 		main_cal = 0.8 * Math.sqrt(lv) + 65 + Math.sqrt(luck - 50)
 	}
-	main_cal = Math.trunc(main_cal + flagship + medium + searchlight + flare + lookout) / mode * 100
+	friend_cal = flagship + medium + searchlight + flare + lookout
+	enemy_cal = e_searchlight + e_flare
+	main_cal = Math.trunc(main_cal + friend_cal - enemy_cal) / mode * 100
 	$("p.result").text(main_cal.toFixed(2)+"%");
 	
 }
